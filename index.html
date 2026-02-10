@@ -1,10 +1,65 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Título de mi página</title>
+    <style>
+        .tables {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <script>
+        async function btBuscar() {
+            let nombre = document.getElementById('lbNombre').value;
+            if (nombre == "") {
+                return;
+            }
+            alert(nombre);
+        }
+    </script>
 </head>
+
 <body>
-    <h1>¡Hola Mundo!</h1>
+    <center>
+        <h1>Mi pagina</h1>
+
+        <br />
+        <label>Nombre: </label>
+        <input id="lbNombre" type="Text" />
+
+        <input type="submit" value="Buscar" onclick="btBuscar(); return false;" />
+        <br />
+
+        <br />
+        <table class="tables">
+            <tr>
+                <th>Nombre</th>
+                <th>Acción</th>
+            </tr>
+            <tr>
+                <td>Andres</td>
+                <td><input type='submit' value='Editar' /></td>
+            </tr>
+            <tr>
+                <td>Felipe</td>
+                <td><input type='submit' value='Editar' /></td>
+            </tr>
+        </table>
+        <br />
+
+        <img src="bean.jpg" style="width: 150px; height: 100px;" />
+    </center>
 </body>
+
 </html>
